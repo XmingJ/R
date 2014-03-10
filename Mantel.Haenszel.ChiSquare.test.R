@@ -1,5 +1,7 @@
 ###Mantel-Haenszel Chi-Square test
 ###Use R
+### 
+### The score1 and score2 default are Table rank
 
 
 MM=function(x,score1=1:dim(x)[1],score2=1:dim(x)[2]){
