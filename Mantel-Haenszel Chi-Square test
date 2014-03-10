@@ -14,8 +14,6 @@ res<-gg[,1:2][rep(1:nrow(gg),gg$V3),]# method 2 (see above)
 res<-apply(gg[,1:2],2,function(x){rep(x,gg$V3)}) # method 1
 M=(cor(res)[2,1]^2)*(nrow(res)-1)
 p=1-pchisq(M,1)
-ch1=chisq.test(x)
-list(M2=M,p.value=p)
 cat("\n\n        Mantel-Haenszel Chi-Square test \n\ndata:  ","x","\nM-squared = ",M,", df = 1, pvalue = ",p,"\n\n")
 }
 
