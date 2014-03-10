@@ -1,3 +1,7 @@
+###Mantel-Haenszel Chi-Square test
+###Use R
+
+
 MM=function(x,score1=1:dim(x)[1],score2=1:dim(x)[2]){
 gg=data.frame()
 
@@ -15,6 +19,7 @@ list(M2=M,p.value=p)
 cat("\n\n        Mantel-Haenszel Chi-Square test \n\ndata:  ","x","\nM-squared = ",M,", df = 1, pvalue = ",p,"\n\n")
 }
 
+###example
 edu=c(9,11,9,44,52,41,13,23,12,10,22,27)
 table.3.16=cbind(expand.grid(list(edu=c("Low","Middle","High"),as.scale=c("HS","HSG","C","CG"))),count=edu)
 table.3.16.array=tapply(table.3.16$count,table.3.16[,1:2], sum)
